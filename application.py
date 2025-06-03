@@ -41,7 +41,7 @@ def predict():
 
         prediction = model.predict(data)
         output = float(np.round(prediction[0], 2))
-        return jsonify({'prediction': output})
+        return jsonify(output)
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
